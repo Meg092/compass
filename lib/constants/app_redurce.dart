@@ -22,7 +22,7 @@ class AppRedurce extends GetView<LuopanConfigLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.olrjbpt.value)),
+              url: WebUri.uri(Uri.parse(controller.ncgfthqs.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
