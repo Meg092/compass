@@ -36,6 +36,8 @@
 	<string>Please authorize the microphone to detect ambient noise decibels</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Please access the album for the feedback upload pictures</string>
+	<key>NSCalendarsUsageDescription</key>
+    <string>Please authorize Calendar to use the compass function</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
