@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Luopan</string>
+	<string>SALTORO CAP</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>luopan</string>
+	<string>SALTORO CAP</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -26,12 +26,16 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Please access camera for upload the feedback pictures</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>需要访问位置信息以使用罗盘功能</string>
+	<string>請授權位置資訊以使用羅盤功能</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>需要访问位置信息以使用罗盘功能</string>
+	<string>請授權位置資訊以使用羅盤功能</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>需要访问麦克风以检测环境噪音分贝</string>
+	<string>請授權麥克風以偵測環境噪音分貝</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please access the album for the feedback upload pictures</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:luopan/constants/app_redurce.dart';
 import 'package:luopan/pages/luopan_clothing_guide/luopan_clothing_guide_binding.dart';
 import 'package:luopan/pages/luopan_clothing_guide/luopan_clothing_guide_view.dart';
 import 'package:luopan/pages/luopan_compass_reading/luopan_compass_reading_binding.dart';
 import 'package:luopan/pages/luopan_compass_reading/luopan_compass_reading_view.dart';
+import 'package:luopan/pages/luopan_config/luopan_config_binding.dart';
+import 'package:luopan/pages/luopan_config/luopan_config_view.dart';
 import 'package:luopan/pages/luopan_decibel_meter/luopan_decibel_meter_binding.dart';
 import 'package:luopan/pages/luopan_decibel_meter/luopan_decibel_meter_view.dart';
 import 'package:luopan/pages/luopan_home/luopan_home_binding.dart';
@@ -49,7 +52,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: '罗盘指南',
           getPages: Compass,
-          initialRoute: '/luopan_tab',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: AppColors.primary,
@@ -94,6 +97,14 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Compass = [
   GetPage(
+    name: '/',
+    page: () => const LuopanConfigView(),
+    binding: LuopanConfigBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
     name: '/luopan_tab',
     page: () => const LuopanTabView(),
     binding: LuopanTabBinding(),
@@ -124,6 +135,13 @@ List<GetPage<dynamic>> Compass = [
     name: '/luopan_toolbox',
     page: () => const LuopanToolboxView(),
     binding: LuopanToolboxBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
+    name: '/luopan_session',
+    page: () => AppRedurce(),
     transition: Transition.cupertino,
     popGesture: true,
     preventDuplicates: false,

