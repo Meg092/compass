@@ -29,11 +29,11 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Please access camera for upload the feedback pictures</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>請授權位置資訊以使用羅盤功能</string>
+	<string>Please authorize location information to use the compass feature</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>請授權位置資訊以使用羅盤功能</string>
+	<string>Please authorize location information to use the compass feature</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>請授權麥克風以偵測環境噪音分貝</string>
+	<string>Please authorize the microphone to detect ambient noise decibels</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Please access the album for the feedback upload pictures</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
